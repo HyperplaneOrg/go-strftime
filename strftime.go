@@ -35,6 +35,7 @@ var conversion = map[rune]string{
 	// stdNumShortTZ     */ 'b': "-07",    // always numeric
 	// stdNumColonTZ     */ 'b': "-07:00", // always numeric
 	/* nonStdMilli		 */ 'L': ".000",
+	/* stdZeroYearDay    */ 'j': "002",
 }
 
 // This is an alternative to time.Format because no one knows

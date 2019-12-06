@@ -47,3 +47,14 @@ func TestRubyStrftime(t *testing.T) {
 		t.Fail()
 	}
 }
+
+func TestDayOfYear(t *testing.T) {
+	tm := time.Unix(1575158400, 0)
+	utc, _ := time.LoadLocation("UTC")
+	tm = tm.In(utc)
+	result := Format("%j", tm)
+	if result != "001" {
+		t.Logf("%s != %s", result, "001")
+		t.Fail()
+    }
+}
